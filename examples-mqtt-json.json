@@ -1,0 +1,75 @@
+
+insert into devices (id,name,type,reg_date) values ('undefined','undefined','undefined',current_timestamp());
+
+payload.cmd
+msg.payload="insert into devices "+
+"(id,name,type,reg_date) values "+
+"('" + msg.device_id+"','"+msg.device_name+"',"+
+"'"+msg.device_type+"','"+Date().toString()+"')";
+
+{
+"type":"sys",
+"cmd":"getTime",
+"device_id":"ABCD1234"
+}
+
+{
+"type":"sys",
+"cmd":"sendStatus",
+"device_id":"ABCD1234",
+"status":"initialized",
+"local_time":"1551394398171"
+}
+
+{
+"type":"sys",
+"cmd":"registerDevice",
+"device_id": "ABCD12341",
+"device_name":"iot01",
+"device_type":"temp-sensor"
+}
+
+{
+"type":"sys",
+"cmd":"sendError",
+"device_id":"ABCD1234",
+"message":"This is an error message"
+}
+
+{
+"type":"service",
+"cmd":"listDevices"
+}
+
+{
+"type":"service",
+"cmd":"listDevicesByType",
+"deviceType":"type1"
+}
+
+{
+"type":"sys",
+"cmd":"registerService",
+"name":"Service1",
+"path":"Service1_path",
+"num_params":"3",
+"context":"Room1",
+"device_id": "ABCD1234"
+}
+
+msg.topic="insert into status "+
+"(device_id,status,local_time,status_time) values "+
+"('"+ msg.payload.device_id+"',"+
+"'registered',"+
+"'"+msg.payload.local_time+"',"
+"current_timestamp());";
+
+msg.topic="insert into service "+
+"(name,path,num_params,context,device_id,reg_date) values "+
+"('" + msg.payload.service_name+"',"+
+"'"+ msg.payload.service_path + "',"+
+"'"+ msg.payload.num_params + "',"+
+"'"+ msg.payload.context + "',"+
+"'"+ msg.payload.device_id + "',"+
+"current_timestamp());";
+return msg;

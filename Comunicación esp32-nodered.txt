@@ -1,0 +1,135 @@
+From ESP32
+	<type>
+		<cmd>
+			<param1>
+			...
+			<paramN>
+			
+		<descripcion>
+
+		<ejemplo en JSON>
+
+	sys
+		registerDevice			OK
+			device_id
+			device_type
+			device_name
+		
+		Registra un nuevo dispositivo, indicando un ID único, un tipo y un nombre.
+		El ID único será necesario para cada transacción que quiera realizar. De momento no hay otra autenticación.
+		Añade un registro en la tabla "device"
+		Añade un registro en la tabla "status", con status="registered"
+		El dispositivo debe suscribirse al canal MQTT que tiene su mismo ID, será la forma en que el GW le devuelva datos e instrucciones
+		
+		{"type":"sys","cmd":"registerDevice","device_id": "ABCD12341","device_name":"iot01","device_type":"temp-sensor"}
+		
+		getTime					OK
+			device_id
+			
+		Solicita la hora al gateway. El dato se le devuelve por el canal MQTT <device_id>
+		
+		{"type":"sys","cmd":"getTime","device_id":"ABCD1234"}
+		
+		setAlarm				TO-DO
+			device_id
+			alarm_time
+		
+		Solicita una alarma para ser avisado más tarde. Se puede usar para eventos programados o hacer wake-up tras un sleep.
+		Se almacena en la tabla "events" (aún por diseñar)
+		
+		sendError				OK
+			device_id
+			message
+			
+		Envía un mensaje de error y se almacena en la tabla "errormessage"
+		
+		{"type":"sys","cmd":"sendError","device_id":"ABCD1234","message":"This is an error message"}
+		
+		sendSecurity			TO-DO
+			device_id
+			condition
+		
+		Procesamiento de eventos de seguridad. Aún por diseñar
+		
+		sendStatus				OK
+			device_id
+			uptime
+			local_time
+			status
+		
+		Envía el estado del sistema, junto con la hora local y el tiempo uptime que lleva encendido. Se almacena en la tabla "status"
+			
+		{"type":"sys","cmd":"sendStatus","device_id":"ABCD1234","status":"initialized","local_time":"1551394398171"}
+			
+		sendMesg				TO-DO
+			device_id
+			message
+			peer_id
+		
+		Envía un mensaje a otro dispositivo <peer_id> y se publica en el canal del mismo. 
+		Se almacena en la tabla "messages". (aún por diseñar)
+			
+	exec						TO-DO
+	
+	data						TO-DO
+		put						TO-DO
+		get						TO-DO
+			device_id
+			data
+			
+	service
+		registerService			OK
+			name
+			path
+			--interval
+			num_params
+			context
+			device_id
+		
+		Registra un nuevo servicio en el sistema: nombre del registro, path MQTT para suscribirse, número de parámetros, contexto.
+		El contexto puede ser una forma de agruparlos, o determinar cuál tienes más cerca, por ejemplo.
+		El número de parámetros aún no tiene ningún uso.
+		
+		{"type":"sys","cmd":"registerDevice","device_id": "ABCD12341","device_name":"iot01","device_type":"temp-sensor"}
+		
+		listDevices				OK
+			device_id
+		
+		Devuelve una lista de todos los dispositivos. No le veo utilidad, pero funciona.
+		
+		{"type":"service","cmd":"listDevices"}
+		
+		listDevicesByType		OK
+			device_id
+			device_type
+			
+		Devuelve una lista de dispositivos de un tipo determinado. Esto tiene más sentido. 
+		
+		{"type":"service","cmd":"listDevicesByType","deviceType":"type1"}
+		
+		listDevicesByContext	TO-DO
+			device_id
+			context
+		listDeviceServices		TO-DO
+			device_id
+			peer_id
+		subscribeService		TO-DO
+			device_id
+			service
+			peer_id
+
+Está sección aún está verde. ES la comunicación desde NOde-red hacia el dispositivo. 			
+From NodeRed
+	sys
+		registerConfirm
+		registerError
+			message
+		
+
+json:
+	device_id
+	type
+		cmd
+			parameters
+	hash
+	confirm

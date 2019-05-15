@@ -1,0 +1,56 @@
+Hardware
+	Microcontroladores
+		- Arduino
+		- ESP8266
+		- ESP32
+		- nordicsemi nrf52 series
+		- https://www.freertos.org/a00090.html
+		- Comunicaciones 1-wire, I2C y SP
+	Requisitos
+		- Bajo consumo
+		- Bajo precio
+		- Comunicaciones integradas: WIFI, BlueTooth, Zigbee, Lora, LAN
+		- Alimentación? 5v, 3,3V
+	Montaje
+		- PCB estandar con conexiones 1Wire, 12C y SPI
+		- Conectores para encadenar dispositivos 1, 2 y 4 cables
+		- Fuente de alimentación
+Software base
+	- FreeRTOS
+Protocolos
+	- CoAP
+	- MQTT
+	- Autodescubrimiento (Zeronconf (mdns, dns-sd, ssdp) , UPNP, buscar cuál implementar)
+	
+Funciones
+	Funciones hacia N0
+		- Lectura de sensores
+		- Calibración de sensores
+		- Control de actuadores
+		- Bridge simple entre protocolos (muy simple)
+	Funciones en N1
+		- Cacheo de datos locales
+		- Comunicaciones dentro de N0
+			- Descubrimiento de vecinos
+			- Uso de vecinos como proxy hacia N1
+			- Descubrimiento de caminos hacia N1
+			- Encriptación AES128
+	Funciones hacia N2
+		- MQTT / CoAP
+			- Publicación de datos, estado, registro, etc
+			- Publicación de características de sensores y actuadores
+			- Suscripción a comandos y cambios en la lógica de funcionamiento
+			- Habilitación/desactivación de dispositivos
+		- SSL / Encriptación
+		- Envío de datos con cifrado simple
+		- Solicitudes simples hacia blockchain
+		- Descubrimiento de servicios
+		- Registro y oferta de servicios propios. Describir bien el proceso de registro, creación de shared-key, etc.
+API
+	- Monitorización
+	- Control directo por el operador (solucionar autenticación)
+	- Actualización
+	- 
+Seguridad
+	- AES 128, shared-key única. Asignada en el registro del dispositivo. 
+	- Encontrar una semilla válida.

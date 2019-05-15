@@ -1,0 +1,85 @@
+- Sensores y actuadores
+	- IR (clonar códigos):
+		- mando TV
+	- RF 2.4 Ghz
+	- RF 435 Mhz (Clonar códigos)
+		- Alarma casa y sensores
+			- Podemos leer el estado de los sensores?
+		- Monitor de consumo?
+		- Mando del coche?
+	- Movimiento
+		- Contar pasos?
+	- Quitar y poner sensores online
+		- Botón para habilitarlos y apagarlos
+	- WIFI
+	- Bluetooth
+		- Detectar móviles en casa
+		- Funciones habilitadas solo si BT está presente
+		- Pulsómetro
+	- Temperatura?
+	- Sonido?
+	- Luz?
+	
+	
+- Qué hará Node-red
+	- Recibir los eventos y datos
+	- Bridge entre dispositivos
+	- Fabricar reglas?
+		- Enviar reglas al ESP
+	- Enviar instrucciones directas al ESP
+	- Subir datos a App en la nube (elegir a cuál)
+	- Envío de correos de alerta
+		- Alarma encendida o apagada y estado de los sensores
+		- 
+	- Mapeo y formateo de datos
+	- Preparar JSON para el cloud
+	- Cachear datos en BBDD antes de subirlos.
+
+- Página Web en ESP32
+	- Monitorización de sensores
+	- Fecha y hora
+	- Estado conectividad
+	- Fichero de log?
+
+- Página Web en Raspberry
+
+- App móvil
+
+- Rescatar control remoto?
+
+Orden de cosas
+- Recibir instrucciones MQTT
+- Modificar variables desde MQTT
+	- Sincronización de un struct
+- Conector "estandar" para los sensores
+- Funciones para habilitar y deshabilitar
+- Método de habilitar: botón, serial, mqtt (este último más sencillo)
+- Pruebas para cada sensor
+	- Publicar datos y eventos en MQTT
+	- Detección de patrones?
+- Pruebas inalámbricas
+	- Bluetooth	
+		- Scanear dispositivos
+		- Lista de dispositivos a MQTT
+		- Reacción de MQTT
+	- 2.4 GHz
+	- 433 Mhz
+- Servidor HTTP monintorización/control
+- Monitorización de estado desde Node-red
+- Control desde MQTT
+	- Conjunto de instrucciones y semántica
+	
+- Configurar más de un ESP	
+	- Uno fijo
+		- Alimentación fija
+		- Sensores siempre conectados, uso bajo demanda
+	- Uno móvil	
+		- A baterías
+		- Bluetooth
+			- Detectar el coche
+		- Wifi
+			- Detectar ubicacion trabajo / casa / calle 
+		- Pocos sensores	
+			- Temperatura
+			- Movimiento / vibración
+			
