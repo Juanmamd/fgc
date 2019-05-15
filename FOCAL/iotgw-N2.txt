@@ -29,4 +29,4 @@ Roles y funciones
 	- Anotaciones semánticas a los datos
 	- Regitro en N4 de los servicios descubiertos en N1 (mediante adquisición de datos con metadatos)
 Seguridad
-	- BBDD de shared-keys de N1
+	- BBDD de shared-keys AES256 de N1

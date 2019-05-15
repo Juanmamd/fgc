@@ -34,7 +34,7 @@ Funciones
 			- Descubrimiento de vecinos
 			- Uso de vecinos como proxy hacia N1
 			- Descubrimiento de caminos hacia N1
-			- Encriptación AES128
+			- Encriptación AES256
 	Funciones hacia N2
 		- MQTT / CoAP
 			- Publicación de datos, estado, registro, etc
@@ -52,5 +52,5 @@ API
 	- Actualización
 	- 
 Seguridad
-	- AES 128, shared-key única. Asignada en el registro del dispositivo. 
+	- AES 256, shared-key única. Asignada en el registro del dispositivo. 
 	- Encontrar una semilla válida.
