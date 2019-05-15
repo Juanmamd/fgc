@@ -1,0 +1,10 @@
+- Desarrollo basado en plugins
+	- Comunicaciones
+	- Protocolos
+	- Encriptación
+	- Anotación de datos
+	- Formato de sensores
+	- Blockchain
+- Plugins descargables (en binario para N1) / instalables
+- A partir de N2, soportar más lenguajes de probramación para plugins
+- 

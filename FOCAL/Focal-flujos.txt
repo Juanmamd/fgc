@@ -1,0 +1,42 @@
+N1 - registro
+===> N1
+	- Boot
+	- Comprueba dispositivos internos
+	- Comprueba N0 (comprueba dispositivos conectados)
+	- Genera estructura definiendo sus funciones(N1_desc):
+		- ID, fabricante, N/S, etc
+		- Sensores conectados
+		- Actuadores conectados
+		- Servicios ofrecidos
+		- API e interfaces de gestión (URL, tipo autenticación, etc)
+		- 
+	- Descubrimiento
+		- Preguntar por gateway. Usar todos los medios de comunicación a su disposición hasta encontrar uno.
+		- Preguntar por el mejor gateway (cercanía, comunicaciones (consumo energético))
+		- Conectar al mejor gateway (Best_GW)
+	- Registro
+		- Solicitar registro (envia N1_desc a Best_GW)
+===> N2
+	- Recibe N1_desc
+	- Solicita token a BlockChain (BC)
+	- Añade BC_token a N1_desc
+	- Solicita ID a directorio (LDAP, o cualquier otro), N1_ID
+	- Añade N1_ID al N1_desc
+	- Solicita shared key para N1 (ver cómo tener un generador y servicio de consultas de shared key), N1_key
+	- Se añade N1_key a N1_desc
+	- Se añaden "anotaciones" a N1_desc, N1_annot (localización gps, ubicación, edificio, aplicación, etc)
+	- Se añade perfil de entrega de datos y servicios a N1 (por tiempo, por eventos, etc), N1_services (Ver si existe un stándar o hay que crear uno)
+	- Entregar lista de comunicaciones y protocolos que aparecen en N2_desc, N2_protos y N2_comms válidos para este GW
+		- N2_desc tendrá una parte pública hacia N1 (N2_desc_N1) y otra hacia N3 (N2_desc_N3). Además habrá ciertos datos privados, N2_desc
+	- Envía N1_desc a N1 encriptado (ver cómo) por el mismo medio que llegó. 
+===> N1
+	- Recibe N1_desc y ACK de recibido
+	- Selecciona el mejor método de conexión y mejor protocolo de la lista N2_comm
+	- Conectarse por ese medio y protocolo
+	- Revisar propiedades recibidas y empieza a usarlas
+	- ACK hacia N2
+	- Desconecta los dispositivos no solicitados en 
+	- Loop usando N1_services: envío de datos, deep sleep, esperar evento/tiempo, envío de datos / actualización desde GW.
+		- Envío de datos: 
+			- Comprobar si el último GW está disponible, usarlo
+			- Si no, iniciar la búsqueda de GW y hacer

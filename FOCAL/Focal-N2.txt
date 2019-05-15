@@ -30,3 +30,5 @@ Roles y funciones
 	- Regitro en N4 de los servicios descubiertos en N1 (mediante adquisición de datos con metadatos)
 Seguridad
 	- BBDD de shared-keys AES256 de N1
+	- Perfiles de comportamiento de N1
+	- Detección de intrusos mediante señuelos
