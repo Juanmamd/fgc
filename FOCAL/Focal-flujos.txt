@@ -20,7 +20,7 @@ N1 - registro
 	- Recibe N1_desc
 	- Solicita token a BlockChain (BC)
 	- Añade BC_token a N1_desc
-	- Solicita ID a directorio (LDAP, o cualquier otro), N1_ID
+	- Solicita ID a directorio (LDAP, o cualquier otro), N1_DIR_ID
 	- Añade N1_ID al N1_desc
 	- Solicita shared key para N1 (ver cómo tener un generador y servicio de consultas de shared key), N1_key
 	- Se añade N1_key a N1_desc
