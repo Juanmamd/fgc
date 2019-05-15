@@ -1,0 +1,34 @@
+// http://www.objgen.com/json/models/UFq
+
+{
+  "workmodel": {
+    "resource1": {
+      "work1": {
+        "resource": "resource1",
+        "operation": [
+          "read",
+          "write",
+          "on",
+          "off",
+          "dim",
+          "open",
+          "close"
+        ],
+        "trigger": {
+          "time": "interval,date",
+          "event": [
+            "minvalue",
+            "maxvalue"
+          ],
+          "ondemand": [
+            "demand1",
+            "demand2"
+          ],
+          "value": "triggervalue"
+        }
+      }
+    },
+    "resource2": {},
+    "resource3": {}
+  }
+}

@@ -1,9 +1,11 @@
-http://www.objgen.com/json/models/3rS
+// http://www.objgen.com/json/models/3rS
 {
   "device": {
     "id": "ID_abcdefg",
     "vendor": "VENDOR INC. (www.vendor.com)",
-    "serial": "SN_12345678"
+    "serial": "SN_12345678",
+    "devicetype": "C1E2P2",
+    "devicelevel": "N1"
   },
   "resources": {
     "sensors": {
@@ -71,47 +73,52 @@ http://www.objgen.com/json/models/3rS
     ]
   }
 }
-device
-  id= ID_abcdefg
-  vendor= VENDOR INC. (www.vendor.com)
-  serial= SN_12345678
-resources
-  sensors
-    sensor1= sensor1_pointer
-    sensor2= sensor2_pointer
-  actuators
-    actuator1= actuator1_pointer
-  internal
-    memory = size Kb
-    storage = size Kb
-    numproc = 2
-    cpu =   1 Mhz
-commprotocols
-  wifi = mac_wifi
-  ble = mac_ble
-  bt  = mac_bt
-  zigbee = mac_zigbee
-  zwave = mac_zwave
-  lora = mac_lora
-  rf[] = mac_rf,freq_rf
-appprotocols[] = mqtt, coap, rest
-services
-  service1
-  service2
-management
-  api1= api1_url
-  api2= api2_url
-security
-  bc_token s = bctk_abcd1234
-  dir_id s = dir_123456
-  key= asdfgqwert
-annotations
-  location
-  observed
-  device
-  social
-  time
-  operational
-gateways
-  gw1[] = gw1_addr, commprotocol1, appprotocol1
-  gw2[] = gw2_addr, commprotocol2, appprotocol2
+
+
+// device
+//   id= ID_abcdefg
+//   vendor= VENDOR INC. (www.vendor.com)
+//   serial= SN_12345678
+//   devicetype = C1E2P2
+//   devicelevel = N1
+// resources
+//   sensors
+//     sensor1= sensor1_pointer
+//     sensor2= sensor2_pointer
+//   actuators
+//     actuator1= actuator1_pointer
+//   internal
+//     memory = size Kb
+//     storage = size Kb
+//     numproc = 2
+//     cpu =   1 Mhz
+// commprotocols
+//   wifi = mac_wifi
+//   ble = mac_ble
+//   bt  = mac_bt
+//   zigbee = mac_zigbee
+//   zwave = mac_zwave
+//   lora = mac_lora
+//   rf[] = mac_rf,freq_rf
+// appprotocols[] = mqtt, coap, rest
+// services
+//   service1
+//   service2
+// management
+//   api1= api1_url
+//   api2= api2_url
+// security
+//   bc_token s = bctk_abcd1234
+//   dir_id s = dir_123456
+//   key= asdfgqwert
+// annotations
+//   location
+//   observed
+//   device
+//   social
+//   time
+//   operational
+// gateways
+//   gw1[] = gw1_addr, commprotocol1, appprotocol1
+//   gw2[] = gw2_addr, commprotocol2, appprotocol2
+// 
