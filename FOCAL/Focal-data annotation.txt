@@ -1,0 +1,13 @@
+- Sensores
+	- Interior/exterior
+	- Ubicación fija: Habitación/salón/baño/almacén/pasillo/cocina/patio/calle/campo/bosque/cultivo
+	- Ubicación móvil: automóvil,moto,bici,barco,avión,dron,
+	- Reconocimiento de imágenes: objetos descubiertos.
+	- Tipo de dispositivo: N1-N4, C0-C2, E0-E3, P0-P2
+	- Datos de la medición: error cometido, calibración, fidelidad del sensor, sensibilidad
+	- Tiempo: fecha y hora, timezone, comienzo, final, duración, intervalos
+	- Social: festivos, eventos, fechas fiscales, 
+	- Dato medido: gas, líquido, sólido, 
+	- Medida física: temperatura, humedad, CO2, vibración, etc
+	- Unidad de medida
+	- Operaciones permitidas: leer, escribir, inc/decrementar, encender/apagar, regular/pasos, min/max

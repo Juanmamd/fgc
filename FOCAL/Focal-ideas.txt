@@ -103,7 +103,7 @@ Clasificación de dispositivos
    | E2   | Lifetime energy-limited      | Non-replaceable primary     |
    |      |                              | battery                     |
    |      |                              |                             |
-   | E9   | No direct quantitative       | Mains-powered               |
+   | E3   | No direct quantitative       | Mains-powered               |
    |      | limitations to available     |                             |
    |      | energy                       |                             |
    +------+------------------------------+-----------------------------+
@@ -118,7 +118,7 @@ Clasificación de dispositivos
    | P1   | Low-power    | Appears connected, perhaps with high        |
    |      |              | latency                                     |
    |      |              |                                             |
-   | P9   | Always-on    | Always connected                            |
+   | P2   | Always-on    | Always connected                            |
    +------+--------------+---------------------------------------------+
 
            Table 4: Strategies of Using Power for Communication

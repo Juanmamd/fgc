@@ -20,13 +20,14 @@ Comunicaciones
 	- Zigbee
 Roles y funciones
 	- Mediador entre N1 y N3
+	- Crea sensores virtuales, reflejos de los N1
 	- OCF bridge (COAP)
 	- Calidad del dato
 	- Tratamieto previo de datos, reducción de datos hacia la nube
 	- Monitorizar comportamiento de ICOs en N1
 	- Reconfigurar ICOs en caso necesario: sampling, thresold, etc
 	- Conciencia del entorno
-	- Anotaciones semánticas a los datos
+	- Anotaciones semánticas a los datos (Annotation Agent)
 	- Regitro en N4 de los servicios descubiertos en N1 (mediante adquisición de datos con metadatos)
 Seguridad
 	- BBDD de shared-keys AES256 de N1

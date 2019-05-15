@@ -7,4 +7,4 @@
 	- Blockchain
 - Plugins descargables (en binario para N1) / instalables
 - A partir de N2, soportar más lenguajes de probramación para plugins
-- 
+- ¿Se pueden desplegar dockers en N2?
