@@ -1,0 +1,25 @@
+L1 - circle
+	1.- Select hardware
+	2.- Select operating system
+	3.- Select programming languages
+	4.- Select communications
+	5.- Select app protocols
+	6.- Select data models (description, annotation, functional)
+	7.- Select compatible L0
+	
+L2 & L3 - circle
+	1.- Same as L1 circle
+	2.- Communications bridge
+	3.- App protocols bridge
+	4.- Intra Data models transformation
+	5.- Distributed databases
+		- Apache Cassandra
+		- MongoDB **
+		- Google CouchDB *
+		- RIAk
+	6.- Distributed filesystems
+	7.- Distributed computing
+	8.- Cloud integration
+	9.- OTA technologies: from L4 and to L1
+	
+	

@@ -10,7 +10,7 @@ Hardware
 	- Onion Omega 2 
 Software base
 	- Linux
-	- Microkernel de sistema distribuido
+	- Microkernel de sistema distribuido - FOCAL
 Comunicaciones
 	- WIFI
 	- LAN

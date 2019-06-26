@@ -1,0 +1,8 @@
+Small Probe of Concepts
+- Mongodb cluster on constraint devices (N2)
+- Hadoop HDFS on restricted devices (N2)
+- Blocchain operations:
+	- ACL
+	- Data and event logging
+	- Simple BC query from N1
+- Docker on N2

@@ -1,0 +1,44 @@
+BBDD hosted by N2 nodes
+Distributed DDBB:
+	- MongoDB sharded collections
+		- Primary and secondary nodes
+	- Cassandra	
+		- Ver: https://www.datastax.com/dev/blog/32-node-raspberry-pi-cassandra-cluster
+Distributed FS:
+	- Apache Hadoop
+
+DDBB Contents:
+- FocalNode:
+	- Name
+	- Addrs[
+		- Addr_type: IPv4 | IPv6 | etc
+		- Addr: SSID|IP, VLAN|IP, etc
+		]
+	- Layers[L1, L2, L3]
+	- Roles[DDBB, DFS, NameRes, Compu, ... ]
+	- Resources[ DDBB: mongodb, DDBB: cassandra, CPU: 16x2000 (Thread x Mhz), Stor: 32 Gb, URL: admin, URL: Dashb]
+	- Security[ Model: S1... SN, PubKey, BCAddr]
+	- ObjectDescription: OneIota object
+- FocalNodeStatus:
+	- Name:
+	- Uptime:
+	- LastError:
+	- AvailableLayers[L1, L2, L3]
+	- AvailableRoles[DDBB, DFS, NameRes, Compu, ... ]
+	- AvailableResources[ DDBB: mongodb, DDBB: cassandra, CPU: 16x2000 (Thread x Mhz), Stor: 32 Gb, URL: admin, URL: Dashb, URL: updates]
+	- DefCon: 1,2,3,4
+- FocalNodeNeighbors:
+	- ListNodes
+		- Name
+		- Addrs ...
+		- Distance: N
+- ResourcesCache
+	- ResType: DDBB, DFS, Compu, URL, etc
+	- NextHop: FocalNode
+	- TotalHops: N
+
+- Activity
+	- Reservation
+	- ACK
+	- NACK
+	
