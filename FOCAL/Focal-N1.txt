@@ -30,10 +30,10 @@ Funciones
 		- Bridge simple entre protocolos (muy simple)
 	Funciones en N1
 		- Cacheo de datos locales
-		- Comunicaciones dentro de N0
+		- Comunicaciones dentro de N1
 			- Descubrimiento de vecinos
-			- Uso de vecinos como proxy hacia N1
-			- Descubrimiento de caminos hacia N1
+			- Uso de vecinos como proxy hacia N2
+			- Descubrimiento de caminos hacia N2
 			- Encriptación AES256
 	Funciones hacia N2
 		- MQTT / CoAP
